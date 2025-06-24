@@ -1,0 +1,419 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.2);
+}
+
+.navbar h1 {
+  color: orange;
+  font-size: 1.5rem;
+}
+
+.navbar nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: orange;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1e1e1e, #111);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero button {
+  background-color: orange;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #ff7a00;
+}
+
+/* Food Gallery */
+.food-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.food-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+.food-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.food-card h3 {
+  margin: 0.8rem 0 0.3rem;
+  color: orange;
+}
+
+.food-card .price {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+/* Carousel Section */
+.carousel-section {
+  padding: 3rem 2rem;
+  background-color: #111;
+}
+
+.carousel-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: orange;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 270px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  margin: 0 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 165, 0, 0.1);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.carousel-item h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: orange;
+}
+
+.carousel-item .price {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: orange;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #ff7a00;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-item {
+    flex: 0 0 80%;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar nav {
+    margin-top: 0.5rem;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+
+/* footer */
+
+.site-footer {
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #ff9900;
+}
+
+.site-footer h2 {
+  font-size: 1.8rem;
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.site-footer p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons li a {
+  color: #ff9900;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #fff;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Promo Banner */
+.promo-banner {
+  background-color: #1a1a1a;
+  border: 1px dashed #ff9900;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.promo-banner h4 {
+  font-size: 1.1rem;
+  color: #ff9900;
+  margin-bottom: 8px;
+}
+
+.promo-banner p {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container iframe {
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #ff9900;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1c1c1c;
+  padding: 20px;
+  border: 2px solid #ff9900;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Order Section */
+
+button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  background: #ff5722;
+  color: white;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: #e64a19;
+}
+
+.order-list-section {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f7f7f7;
+  border-left: 4px solid #ff6600;
+  border-radius: 5px;
+}
+
+/* delete button */
+
+button.confirm-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 8px;
+  padding: 6px 12px;
+}
+
+button.delete-btn {
+  background-color: #e53935;
+  color: white;
+  padding: 6px 12px;
+}
+
+/* Confirmation Modal */
+.confirm-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.confirm-btn.confirmed {
+  background-color: #4CAF50; /* green */
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.confirmation-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745; /* Bootstrap green */
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  z-index: 9999;
+  animation: fadeInOut 5s ease forwards;
+}
+
+/* Optional: fade in/out effect */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.receiptPopup {
+  display:none; 
+  padding:20px; 
+  border:1px solid #ccc; 
+  background:rgb(15, 14, 14); 
+  max-width:400px; margin:auto; 
+  margin-top:20px;
+}
